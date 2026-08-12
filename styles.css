@@ -212,9 +212,13 @@ h1 {
 
 .experience-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 4vw, 58px); }
 .experience-card { position: relative; padding: clamp(28px, 3.5vw, 48px); border: 1px solid var(--ink); background: var(--paper); }
+.experience-card-wide { grid-column: 1 / -1; }
 .experience-card::before { position: absolute; top: -6px; left: 28px; width: 70px; height: 11px; border-right: 1px solid var(--ink); border-left: 1px solid var(--ink); background: var(--paper); content: ""; }
 .experience-card header { display: flex; justify-content: space-between; gap: 24px; margin-bottom: 26px; padding-bottom: 22px; border-bottom: 1px solid var(--ink); }
 .experience-card header h3 { margin-bottom: 9px; font-size: clamp(26px, 2.5vw, 38px); font-weight: 700; letter-spacing: .08em; }
+.experience-card header h3 a { display: inline-flex; align-items: center; gap: 10px; }
+.experience-card header h3 a::after { content: "↗"; font: 15px ui-monospace, monospace; }
+.experience-card header h3 a:hover, .experience-card header h3 a:focus-visible { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; }
 .experience-card header span { color: var(--graphite); font-size: 12px; line-height: 1.7; letter-spacing: .04em; }
 .experience-card header b { color: transparent; font: 48px Georgia, serif; font-weight: 700; -webkit-text-stroke: 1px var(--ink); }
 .experience-date { margin-bottom: 14px; color: var(--muted); font: 10px ui-monospace, monospace; letter-spacing: .12em; }
