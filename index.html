@@ -9,7 +9,7 @@
     />
     <meta name="theme-color" content="#ffffff" />
     <title>WXR｜个人主页与作品集</title>
-    <link rel="stylesheet" href="./styles.css?v=20260812-6" />
+    <link rel="stylesheet" href="./styles.css?v=20260812-7" />
   </head>
   <body>
     <header class="site-header">
@@ -201,16 +201,20 @@
 
         <div class="project-grid">
           <article class="project-card">
-            <div class="project-visual visual-one">
+            <div class="project-visual">
               <span class="visual-index">01</span>
-              <div class="project-diagram agent-diagram" aria-hidden="true">
-                <span class="diagram-box">SFT</span>
-                <i>→</i>
-                <span class="diagram-box diagram-box-dashed">9B</span>
-                <i>→</i>
-                <span class="diagram-node">2B</span>
-                <i>↗</i>
-                <span class="diagram-box diagram-box-dark">RL</span>
+              <div class="project-diagram failure-diagram" aria-hidden="true">
+                <i class="trace-line trace-main"></i>
+                <i class="trace-line trace-positive"></i>
+                <i class="trace-line trace-negative"></i>
+                <span class="trace-node trace-start">S0</span>
+                <span class="trace-node trace-step">S1</span>
+                <span class="trace-node trace-failure">FAIL</span>
+                <span class="trace-node trace-recover">✓</span>
+                <span class="trace-node trace-reject">×</span>
+                <b class="branch-tag branch-positive-tag">RECOVER</b>
+                <b class="branch-tag branch-negative-tag">REJECT</b>
+                <strong>FAILURE-BRANCH GRPO</strong>
               </div>
               <p>AGENTIC RL</p>
             </div>
@@ -218,22 +222,36 @@
               <div class="project-meta"><span>2026.05 — 2026.07</span><span>LONG-HORIZON AGENT</span></div>
               <h3>面向长程决策的 Agentic RL</h3>
               <p>
-                基于 ShopSimulator 构建 SFT、9B→2B 在线策略蒸馏与 Agentic RL 训练链路。
-                2B 模型保留 Teacher 96.3% 的 Agent 能力，严格任务成功率达到 65%。
+                基于 ShopSimulator 构建 SFT、9B→2B 在线策略蒸馏与 Agentic RL 训练链路，
+                并用 Failure-Branch GRPO 优化全失败轨迹；严格任务成功率达到 65%。
               </p>
-              <ul><li>On-Policy Distillation</li><li>GRPO</li><li>veRL</li><li>Tool Use</li></ul>
+              <ul><li>On-Policy Distillation</li><li>GRPO</li><li>Failure-Branch</li><li>veRL</li><li>Tool Use</li></ul>
             </div>
           </article>
 
           <article class="project-card">
-            <div class="project-visual visual-two">
+            <div class="project-visual">
               <span class="visual-index">02</span>
-              <div class="project-diagram medical-diagram" aria-hidden="true">
-                <span class="scan-box"><i></i><b>IMG</b></span>
-                <i class="diagram-flow">→</i>
-                <span class="vl-box">VL</span>
-                <i class="diagram-flow">→</i>
-                <span class="report-box"><i></i><i></i><i></i><b>REPORT</b></span>
+              <div class="project-diagram body-gnn-diagram" aria-hidden="true">
+                <b class="gnn-title">BODY-PART GNN</b>
+                <i class="gnn-edge edge-head-left"></i>
+                <i class="gnn-edge edge-head-right"></i>
+                <i class="gnn-edge edge-left-spine"></i>
+                <i class="gnn-edge edge-right-spine"></i>
+                <i class="gnn-edge edge-spine-pelvis"></i>
+                <i class="gnn-edge edge-pelvis-left-knee"></i>
+                <i class="gnn-edge edge-pelvis-right-knee"></i>
+                <i class="gnn-edge edge-left-leg"></i>
+                <i class="gnn-edge edge-right-leg"></i>
+                <span class="part-node part-head">头</span>
+                <span class="part-node part-left-shoulder">左肩</span>
+                <span class="part-node part-right-shoulder">右肩</span>
+                <span class="part-node part-spine">脊柱</span>
+                <span class="part-node part-pelvis">骨盆</span>
+                <span class="part-node part-left-knee">左膝</span>
+                <span class="part-node part-right-knee">右膝</span>
+                <span class="part-node part-left-ankle">左踝</span>
+                <span class="part-node part-right-ankle">右踝</span>
               </div>
               <p>MEDICAL VLM</p>
             </div>
@@ -249,14 +267,20 @@
           </article>
 
           <article class="project-card">
-            <div class="project-visual visual-three">
+            <div class="project-visual">
               <span class="visual-index">03</span>
-              <div class="project-diagram rag-diagram" aria-hidden="true">
-                <span class="document-stack"><i></i><b>DOC</b></span>
+              <div class="project-diagram layout-diagram" aria-hidden="true">
+                <span class="layout-page">
+                  <i class="layout-header"></i>
+                  <i class="layout-text"></i>
+                  <i class="layout-chart"></i>
+                  <i class="layout-table"></i>
+                  <b>LAYOUT</b>
+                </span>
                 <i class="diagram-flow">→</i>
-                <span class="rag-core">RAG</span>
+                <span class="parse-routes"><b>OCR</b><b>TABLE</b><b>VLM</b></span>
                 <i class="diagram-flow">→</i>
-                <span class="answer-box"><b>QA</b><i></i><i></i></span>
+                <span class="agent-core">AGENT</span>
               </div>
               <p>MULTIMODAL RAG</p>
             </div>
