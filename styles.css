@@ -328,6 +328,10 @@ h1 {
 .timeline-item h3 { margin-bottom: 10px; font-size: clamp(18px, 1.7vw, 24px); font-weight: 700; letter-spacing: .04em; }
 .timeline-item p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
 
+.thoughts { min-height: 66vh; }
+.thoughts .section-heading { margin-bottom: clamp(42px, 5vw, 72px); }
+.thoughts-space { min-height: clamp(220px, 28vw, 400px); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line-soft); }
+
 .contact { text-align: center; }
 .contact::after { position: absolute; top: 16%; right: 9%; width: 110px; height: 46px; border-top: 1px solid var(--ink); border-right: 1px solid var(--ink); content: ""; transform: rotate(4deg); }
 .contact-kicker { margin-bottom: 28px; color: var(--muted); font: 9px ui-monospace, monospace; letter-spacing: .22em; }
