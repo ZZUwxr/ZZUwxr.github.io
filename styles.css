@@ -194,8 +194,8 @@ h1 {
 
 .about-grid { display: grid; grid-template-columns: .72fr 1.15fr .64fr; gap: clamp(40px, 6vw, 100px); align-items: center; max-width: 1350px; margin: 0 auto; }
 .portrait-frame { position: relative; aspect-ratio: 3/4; padding: 8px; border: 1px solid var(--ink); background: var(--paper-light); }
-.portrait-frame img { width: 100%; height: 100%; border: 1px solid var(--line-soft); object-fit: cover; filter: grayscale(1) contrast(1.12); transition: filter 250ms ease; }
-.portrait-frame:hover img { filter: grayscale(1) contrast(1.02); }
+.portrait-frame img { width: 100%; height: 100%; border: 1px solid var(--line-soft); object-fit: cover; filter: saturate(.72) contrast(1.03); transition: filter 250ms ease; }
+.portrait-frame:hover img { filter: saturate(.94) contrast(1.01); }
 .portrait-frame span { position: absolute; right: 15px; bottom: 14px; left: 15px; padding: 5px 7px; background: var(--paper-light); font: 9px ui-monospace, monospace; letter-spacing: .14em; }
 .about-copy { color: var(--graphite); font-size: 13px; line-height: 2.05; }
 .about-copy .lead { margin-bottom: 25px; color: var(--ink); font: clamp(16px, 1.45vw, 21px)/2 "Songti SC", SimSun, serif; }
