@@ -259,36 +259,37 @@ h1 {
 .branch-negative-tag { right: 3%; bottom: 17%; }
 .failure-diagram strong { position: absolute; right: 0; bottom: 0; left: 0; text-align: center; font-size: 8px; font-weight: 500; letter-spacing: .09em; }
 
-.anatomy-report-diagram { display: flex; width: 80%; height: 132px; align-items: center; justify-content: center; gap: clamp(10px, 1.4vw, 18px); }
-.anatomy-network { position: relative; display: block; width: 112px; height: 116px; flex: 0 0 auto; }
-.anatomy-network > b { position: absolute; top: 0; right: -3px; padding: 3px 5px; border: 1px solid currentColor; font-size: 8px; font-weight: 500; letter-spacing: .07em; }
-.anatomy-network > em { position: absolute; right: 0; bottom: -8px; left: 0; text-align: center; font-size: 7px; font-style: normal; letter-spacing: .06em; white-space: nowrap; }
-.anatomy-edge { position: absolute; z-index: 1; height: 1px; background: currentColor; transform-origin: left center; }
-.anatomy-head-left { top: 13px; left: 56px; width: 32px; transform: rotate(139deg); }
-.anatomy-head-right { top: 13px; left: 56px; width: 32px; transform: rotate(41deg); }
-.anatomy-left-arm { top: 34px; left: 32px; width: 26px; transform: rotate(122deg); }
-.anatomy-right-arm { top: 34px; left: 80px; width: 26px; transform: rotate(58deg); }
-.anatomy-left-chest { top: 34px; left: 32px; width: 29px; transform: rotate(34deg); }
-.anatomy-right-chest { top: 34px; left: 80px; width: 29px; transform: rotate(146deg); }
-.anatomy-spine { top: 50px; left: 56px; width: 22px; transform: rotate(90deg); }
-.anatomy-left-thigh { top: 71px; left: 56px; width: 26px; transform: rotate(124deg); }
-.anatomy-right-thigh { top: 71px; left: 56px; width: 26px; transform: rotate(56deg); }
-.anatomy-left-shin { top: 92px; left: 42px; width: 25px; transform: rotate(102deg); }
-.anatomy-right-shin { top: 92px; left: 70px; width: 25px; transform: rotate(78deg); }
-.anatomy-node { position: absolute; z-index: 2; display: block; width: 9px; height: 9px; border: 1px solid currentColor; border-radius: 50%; background: var(--paper); transform: translate(-50%, -50%); }
-.project-card:hover .anatomy-node { background: var(--ink); }
-.anatomy-head { top: 13px; left: 56px; width: 15px; height: 15px; }
-.anatomy-left-shoulder { top: 34px; left: 32px; }
-.anatomy-right-shoulder { top: 34px; left: 80px; }
-.anatomy-left-elbow { top: 56px; left: 18px; }
-.anatomy-right-elbow { top: 56px; left: 94px; }
-.anatomy-chest { top: 50px; left: 56px; background: currentColor; }
-.anatomy-pelvis { top: 71px; left: 56px; width: 12px; height: 12px; background: currentColor; }
-.project-card:hover .anatomy-chest, .project-card:hover .anatomy-pelvis { background: currentColor; }
-.anatomy-left-knee { top: 92px; left: 42px; }
-.anatomy-right-knee { top: 92px; left: 70px; }
-.anatomy-left-ankle { top: 116px; left: 37px; }
-.anatomy-right-ankle { top: 116px; left: 75px; }
+.graph-report-diagram { display: flex; width: 82%; height: 132px; align-items: center; justify-content: center; gap: clamp(10px, 1.4vw, 18px); }
+.part-graph { position: relative; display: block; width: 124px; height: 112px; flex: 0 0 auto; transform: rotate(-2deg); }
+.part-graph > b { position: absolute; z-index: 4; top: 1px; right: 1px; padding: 3px 5px; border: 1px solid currentColor; background: var(--paper); font-size: 8px; font-weight: 500; letter-spacing: .07em; }
+.project-card:hover .part-graph > b { background: var(--ink); }
+.part-graph > em { position: absolute; right: 0; bottom: -8px; left: 0; text-align: center; font-size: 7px; font-style: normal; letter-spacing: .06em; white-space: nowrap; }
+.graph-edge { position: absolute; z-index: 1; height: 1px; background: currentColor; transform-origin: left center; }
+.graph-edge-01 { top: 19px; left: 13px; width: 47px; transform: rotate(-7deg); }
+.graph-edge-02 { top: 14px; left: 59px; width: 46px; transform: rotate(31deg); }
+.graph-edge-03 { top: 19px; left: 13px; width: 43px; transform: rotate(65deg); }
+.graph-edge-04 { top: 38px; left: 98px; width: 47px; transform: rotate(149deg); }
+.graph-edge-05 { top: 14px; left: 59px; width: 49px; transform: rotate(78deg); }
+.graph-edge-06 { top: 58px; left: 24px; width: 47px; transform: rotate(-12deg); }
+.graph-edge-07 { top: 48px; left: 70px; width: 41px; transform: rotate(37deg); }
+.graph-edge-08 { top: 58px; left: 24px; width: 38px; transform: rotate(119deg); }
+.graph-edge-09 { top: 48px; left: 70px; width: 38px; transform: rotate(96deg); }
+.graph-edge-10 { top: 73px; left: 103px; width: 42px; transform: rotate(157deg); }
+.graph-edge-11 { top: 91px; left: 48px; width: 44px; transform: rotate(-1deg); }
+.graph-edge-12 { top: 58px; left: 24px; width: 84px; transform: rotate(25deg); opacity: .45; }
+.graph-edge-13 { top: 19px; left: 13px; width: 96px; transform: rotate(34deg); opacity: .35; }
+.graph-node { position: absolute; z-index: 2; display: block; width: 9px; height: 9px; border: 1px solid currentColor; border-radius: 50%; background: var(--paper); transform: translate(-50%, -50%); }
+.project-card:hover .graph-node { background: var(--ink); }
+.graph-node-01 { top: 19px; left: 13px; width: 12px; height: 12px; }
+.graph-node-02 { top: 14px; left: 59px; }
+.graph-node-03 { top: 38px; left: 98px; width: 14px; height: 14px; background: currentColor; }
+.graph-node-04 { top: 58px; left: 24px; }
+.graph-node-05 { top: 48px; left: 70px; width: 11px; height: 11px; }
+.graph-node-06 { top: 73px; left: 103px; }
+.graph-node-07 { top: 91px; left: 48px; width: 13px; height: 13px; background: currentColor; }
+.graph-node-08 { top: 92px; left: 91px; }
+.graph-node-09 { top: 43px; left: 43px; width: 7px; height: 7px; }
+.graph-node-10 { top: 75px; left: 67px; width: 7px; height: 7px; }
 .gnn-report { position: relative; display: block; width: 62px; height: 84px; flex: 0 0 auto; padding: 13px 9px 8px; border: 1px solid currentColor; }
 .gnn-report::after { position: absolute; top: -1px; right: -1px; width: 12px; height: 12px; border-bottom: 1px solid currentColor; border-left: 1px solid currentColor; background: var(--paper); content: ""; }
 .project-card:hover .gnn-report::after { background: var(--ink); }
